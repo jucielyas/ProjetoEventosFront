@@ -1,12 +1,9 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "cli": {
-    "analytics": "a114f3c3-157d-47ee-82ae-ae82ce805221"
-  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "projeto-eventos-front": {
+    "eventos-front": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -20,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/projeto-eventos-front",
+            "outputPath": "dist/eventos-front",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -71,10 +68,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "projeto-eventos-front:build:production"
+              "browserTarget": "eventos-front:build:production"
             },
             "development": {
-              "browserTarget": "projeto-eventos-front:build:development"
+              "browserTarget": "eventos-front:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -82,7 +79,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "projeto-eventos-front:build"
+            "browserTarget": "eventos-front:build"
           }
         },
         "test": {
@@ -105,5 +102,8 @@
       }
     }
   },
-  "defaultProject": "projeto-eventos-front"
+  "defaultProject": "eventos-front",
+  "cli": {
+    "analytics": "14d86a6c-bfea-45b7-84cd-1429636dbc78"
+  }
 }
