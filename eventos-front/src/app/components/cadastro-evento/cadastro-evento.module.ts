@@ -4,14 +4,17 @@ import { CadastroEventoComponent } from './cadastro-evento.component';
 import { RouterModule } from '@angular/router';
 import { CabecalhoComponent } from '../cabecalho/cabecalho.component';
 import { CadastroEventoRoutingModule } from './cadastro-evento-routing.module';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { EnderecoComponent } from '../endereco/endereco.component';
+import { EnderecoModule } from '../endereco/endereco.module';
 
 
 
 @NgModule({
   declarations: [CadastroEventoComponent],
   imports: [
-    CommonModule,RouterModule, CadastroEventoRoutingModule, FormsModule
+    CommonModule,RouterModule, CadastroEventoRoutingModule, FormsModule,
+    ReactiveFormsModule, EnderecoModule
   ],
   exports:[CadastroEventoComponent]
 })

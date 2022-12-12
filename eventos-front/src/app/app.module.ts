@@ -8,6 +8,7 @@ import { CadastroEventoModule } from './components/cadastro-evento/cadastro-even
 import { CabecalhoModule } from './components/cabecalho/cabecalho.module';
 import { ListaEventosModule } from './components/lista-eventos/lista-eventos.module';
 import { FormBuilder, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { EnderecoComponent } from './components/endereco/endereco.component';
 
 
 @NgModule({

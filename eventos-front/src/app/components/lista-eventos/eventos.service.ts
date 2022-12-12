@@ -3,6 +3,8 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Evento } from './evento';
+import { EventoCategoria } from '../cadastro-evento/evento-categoria';
+import { Endereco } from 'src/app/models/endereco';
 
 const API = environment.apiURL;
 
@@ -19,6 +21,18 @@ export class EventosService {
 
   createEvento(evento: Evento): Observable<any> {
     return this.http.post(`${API}/eventos`,evento);
+  }
+
+  getListEventoCategorias(): Observable<Array<EventoCategoria>> {
+    return this.http.get<Array<EventoCategoria>>(`${API}/categorias`);
+  }
+
+  createEventoCategoria(categoria: EventoCategoria): Observable<any> {
+    return this.http.post(`${API}/categorias`,categoria);
+  }
+
+  createEventoEndereco(endereco: Endereco): Observable<any> {
+    return this.http.post(`${API}/endereco`,endereco);
   }
 
 
